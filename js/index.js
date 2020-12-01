@@ -47,6 +47,16 @@ navLink.forEach(item => {
   count++;
 });
 
+const mainHeader = document.querySelector('nav a').style.color = 'green';
+const blogLink = document.createElement("a");
+blogLink.textContent = "Blog";
+blogLink.href = "#";
+document.querySelector('nav').appendChild(blogLink);
+
+const buyNow = document.createElement("a");
+buyNow.textContent = "Buy Now!";
+buyNow.href = "#";
+document.querySelector('nav').prepend(buyNow);
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
