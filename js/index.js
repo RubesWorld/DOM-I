@@ -39,6 +39,14 @@ const siteContent = {
 
 
 //HEADER
+//nav
+const navLink = document.querySelectorAll('nav a');
+let count = 1;
+navLink.forEach(item => {
+  item.textContent = siteContent.nav[`nav-item-${count}`];
+  count++;
+});
+
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
@@ -48,7 +56,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 //CTA - h1
 let ctaTitle = document.querySelector(".cta-text h1");
 ctaTitle.textContent =  'Dom is awesome';
-ctaTitle.innerHTML = "Dom <br> IS <br> Awesome"
+ctaTitle.innerHTML = "Dom <br> IS <br> Awesome";
 
 //CTA - Image   
 let bannerImage = document.querySelector("#cta-img");
@@ -124,6 +132,7 @@ contactTitle.textContent = siteContent['contact']['contact-h4'];
 
 let contactAddy = document.querySelector('.contact p');
 contactAddy.textContent = siteContent['contact']['address'];
+contactAddy.innerHTML = "123 Way 456 Street <br> Somewhere, USA"
 
 let contactNum = contactAddy.nextElementSibling;
 contactNum.textContent = siteContent['contact']['phone'];
